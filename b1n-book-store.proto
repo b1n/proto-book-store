@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option go_package = "github.com/b1n/proto-book-store;book_store";
+
+service BookStore {
+  rpc GetBook (GetBookRequest) returns (GetBookResponse) {}
+}
+
+message GetBookRequest {
+  int32 Id = 1;
+}
+
+message GetBookResponse {
+  int32 Id = 1;
+  string Name = 2;
+}
